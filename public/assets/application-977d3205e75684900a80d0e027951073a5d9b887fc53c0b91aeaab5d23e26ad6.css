@@ -1,0 +1,175 @@
+/* line 5, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.glyphicon {
+  margin-right: 5px;
+}
+
+/* line 8, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.thumbnail {
+  margin-bottom: 20px;
+  padding: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* line 15, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.item.list-group-item {
+  float: none;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+/* line 20, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.item.list-group-item:nth-of-type(odd):hover, .item.list-group-item:hover {
+  background: #428bca;
+}
+/* line 22, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.item.list-group-item .list-group-image {
+  margin-right: 10px;
+}
+/* line 24, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.item.list-group-item .thumbnail {
+  margin-bottom: 0px;
+}
+/* line 26, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.item.list-group-item .caption {
+  padding: 9px 9px 0px 9px;
+}
+/* line 28, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.item.list-group-item:nth-of-type(odd) {
+  background: #eeeeee;
+}
+/* line 30, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.item.list-group-item:before, .item.list-group-item:after {
+  display: table;
+  content: " ";
+}
+/* line 33, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.item.list-group-item img {
+  float: left;
+}
+/* line 35, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.item.list-group-item:after {
+  clear: both;
+}
+
+/* line 38, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/products.sass */
+.list-group-item-text {
+  margin: 0 0 11px;
+}
+/* line 1, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 10, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+/* line 17, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 23, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 26, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 30, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 36, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 40, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 47, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 52, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 56, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 62, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 70, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 81, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 87, /Users/manvendratripathi/kalebr_test_app/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *
+ *
+ */
+ *
+ *
+ * @import "bootstrap-sprockets";
+ * @import "bootstrap"; */

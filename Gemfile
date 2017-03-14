@@ -14,7 +14,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'sqlite3'
 gem 'cancan'
-
+gem 'twilio-ruby'
 gem 'sunspot_rails'
 
 

@@ -13,4 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function(){
+    $("#category_id").on("change", function(){
+        $.ajax({
+          url: "/categories/" + $("#category_id").val() + ".js",
+          data: {id: $("#category_id").val()}
+    });
+    });
+});

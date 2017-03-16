@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   has_one :document
+  has_many :order_items
   belongs_to :category
   accepts_nested_attributes_for :document
   searchable do

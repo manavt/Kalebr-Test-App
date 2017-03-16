@@ -16,7 +16,7 @@ gem 'sqlite3'
 gem 'cancan'
 gem 'twilio-ruby'
 gem 'sunspot_rails'
-
+gem 'rubocop'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

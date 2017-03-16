@@ -17,10 +17,11 @@
 //= require_tree .
 
 $(document).ready(function(){
-    $("#category_id").on("change", function(){
+    $(".search_filter").on("change", function(){
+      var catId = ($("#category_id").val().length === 0 ? 0 : $("#category_id").val())
         $.ajax({
-          url: "/categories/" + $("#category_id").val() + ".js",
-          data: {id: $("#category_id").val()}
+          url: "/categories/" + catId + ".js",
+          data: {category_id: catId, price:  $("#price").val()}
     });
     });
 });

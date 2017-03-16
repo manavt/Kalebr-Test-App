@@ -19,8 +19,7 @@ class CategoriesController < ApplicationController
       end
   end
   def show
-    @category = Category.find params[:id]
-    @category = @category.products
+    @category = Category.search_filter(params[:category_id], params[:price])
     respond_to do | format |
       format.html {}
       format.js {}

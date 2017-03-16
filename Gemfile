@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'paperclip'
+gem 'faraday'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'sqlite3'
@@ -17,7 +18,7 @@ gem 'cancan'
 gem 'twilio-ruby'
 gem 'sunspot_rails'
 gem 'rubocop'
-
+gem 'authy'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

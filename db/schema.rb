@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315141131) do
+ActiveRecord::Schema.define(version: 20170316191022) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -76,6 +76,8 @@ ActiveRecord::Schema.define(version: 20170315141131) do
     t.string   "otp"
     t.string   "role"
     t.boolean  "otp_verified"
+    t.string   "authy_id"
+    t.string   "country_code"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

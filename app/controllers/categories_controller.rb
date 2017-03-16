@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   skip_before_action :authenticate_user!, :only=> :show
-  load_and_authorize_resource
+  #load_and_authorize_resource
   def index
     @category = Category.all
   end
@@ -10,15 +10,13 @@ class CategoriesController < ApplicationController
   end
   def create
     @category = Category.new(category_params)
-    respond_to do | format |
       if @category.save
-        format.html {}
-        format.json {render json: @category}
+         redirect_to new_category_path
+         flash[:notice] = "Category added successfully"
       else
-        format.html {}
-        format.json {render json: @product.errors}
+        redirect_to new_category_path
+        flash[:notice] = "Something went wrong"
       end
-    end
   end
   def show
     @category = Category.find params[:id]

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse ">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">Kalebr</a>
+      <a class="navbar-brand" href="/products" target="_self">Kalebr</a>
     </div>
 
     <ul class="nav navbar-nav navbar-right">
@@ -25,10 +25,11 @@
   <div id="nav-subnav" class="" >
     <div class="tabbable"> <!-- Only required for left/right tabs -->
       <ul class="nav nav-tabs">
+        <% if params[:action] == "index"%>
         <li><a>Sort by category : <%= select_tag :category_id , options_for_select(Category.pluck(:name, :id))%></a></li>
+        <%end%>
         <% if can? :create, Product%>
-        <li><a href="/orders" data-toggle="tab">View orders</a></li>
-        <li><a href="/users" >User information</a></li>
+        <li><a href="/products/order_history">View orders</a></li>
         <li><a href="/categories/new">Add Category</a></li>
         <%end%>
       </ul>

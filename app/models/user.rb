@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  has_many :orders
+  has_many :products, through: :orders
    Roles = [ :admin , :default ]
    def is?( requested_role )
      self.role == requested_role.to_s
@@ -12,11 +14,12 @@ class User < ApplicationRecord
       save
    end
    def send_pin
-     twilio_client.messages.create(
-     to: phone_number,
-     from: "+12015094847",
-     body: "Your PIN is #{otp}"
-     )
+    #  twilio_client.messages.create(
+    #  to: phone_number,
+    #  from: "+12015094847",
+    #  body: "Your PIN is #{otp}"
+    #  )
+    return true
    end
    def twilio_client
      Twilio::REST::Client.new('AC66ded78359d956172d423fb8f095f568', 'e25ee039ee48b712ec57f4f65e080e94')

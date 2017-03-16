@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+  #load_and_authorize_resource
   skip_before_action :authenticate_user!, only: :index
   # GET /products
   # GET /products.json
@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
       @products = Product.search do
         fulltext search
       end
+       @order_item = current_order.order_items.new
   end
 
   # GET /products/1
@@ -65,7 +66,9 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+ def order_history
+    @order_history = Order.all
+ end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product

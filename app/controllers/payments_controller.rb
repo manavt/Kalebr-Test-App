@@ -10,6 +10,7 @@ class PaymentsController < ApplicationController
   def verify
     @phone_number = current_user
     if @phone_number.verify(params[:pin])
+      SendEmailMailer.welcome(current_user).deliver_now!
       current_user.orders.create!(product_id: current_order.product_id)
       current_order.update({user: current_user})
       current_order.order_items.update({order_id: nil})

@@ -1,10 +1,11 @@
 Pending Task :
 users should be able to track status of their orders.
-It should support both Authy OneTouch and Authy SoftToken (as fallback)
+It should support both Authy OneTouch and Authy SoftToken (as fallback) Done
 filters on product pages by price Done .
-Order is not working properly
-Send Email
-Rspec
+Order is not working properly Done
+Send Email Done
+Rspec in progress .......
+Re-design : login and registration
 
 
 system('curl  "https://api.authy.com/protected/json/users/new" \
@@ -45,3 +46,21 @@ require 'authy'
            Authy::API.request_sms(:id => result[1]["user"]["id"], :force => true).ok?
 response = Authy::API.request_sms(:id => 36363384, :force => true)
 response = Authy::API.verify(:id => '36363384', :token => '0837585')
+
+
+Email do not have product details - p1
+Add order viewing to normal user - p1 / p2
+Product, registration , login for re-design - p1
+Move api keys to secrets.yml - p1
+Add comments everywhere - p3
+No need for the user class to be aware of the product class - p1
+New tab for viewing user information from admin panel- p2
+Convert everything to SASS - p1
+Move the add new product link next to the add new category link.
+| Medium     | ProductsController | product_params | Mass Assignment | Parameters should be whitelisted for mass assignment near line 80: params.require(:product).permit! |
+On selecting low to high/high to low/any category filter quantity selection disappears
+
+
+reek
+breakman
+rubocop 

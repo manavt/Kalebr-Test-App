@@ -3,7 +3,7 @@ FactoryGirl.define do
     email { Faker::Internet.email }
     password "password"
     password_confirmation "password"
-    phone_number Faker::Number.number(10)
-    country_code Faker::Number.number(2)
+    phone_number "8050934252"
+    country_code "91"
   end
 end

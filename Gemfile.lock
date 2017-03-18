@@ -126,6 +126,7 @@ GEM
       mimemagic (~> 0.3.0)
     parser (2.4.0.0)
       ast (~> 2.2)
+    power_assert (0.3.1)
     powerpack (0.1.1)
     pr_geohash (1.0.0)
     progress_bar (1.1.0)
@@ -225,6 +226,8 @@ GEM
       rails (>= 3)
       sunspot (= 2.2.7)
     sunspot_solr (2.2.7)
+    test-unit (3.1.5)
+      power_assert
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.6)
@@ -281,6 +284,7 @@ DEPENDENCIES
   sqlite3
   sunspot_rails
   sunspot_solr
+  test-unit
   turbolinks (~> 5)
   twilio-ruby
   tzinfo-data

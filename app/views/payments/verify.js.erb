@@ -1,4 +1,4 @@
-<% if @phone_number.otp_verified %>
+<% if current_user.otp_verified %>
 <% current_user.update({otp_verified: false})%>
   $('#verify-pin').hide()
   $('#status-box').removeClass()

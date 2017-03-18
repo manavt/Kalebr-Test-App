@@ -46,7 +46,6 @@
     -->
   <dataDir>${solr.data.dir:}</dataDir>
 
-
   <!-- The DirectoryFactory to use for indexes.
        
        solr.StandardDirectoryFactory is filesystem
@@ -107,7 +106,6 @@
          http://wiki.apache.org/lucene-java/AvailableLockFactories
     -->
     <lockType>${solr.lock.type:native}</lockType>
-
     <!-- Lucene Infostream
        
          To aid in advanced debugging, Lucene provides an "InfoStream"

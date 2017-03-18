@@ -14,7 +14,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-/solr/*
+/solr/test/*
+/solr/development/*
 !/log/.keep
 !/tmp/.keep
 /public/*

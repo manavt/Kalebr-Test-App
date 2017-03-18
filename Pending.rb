@@ -48,8 +48,8 @@ response = Authy::API.request_sms(:id => 36363384, :force => true)
 response = Authy::API.verify(:id => '36363384', :token => '0837585')
 
 
-Email do not have product details - p1
-Add order viewing to normal user - p1 / p2
+Email do not have product details - p1 Done
+Add order viewing to normal user - p1 / p2 in Done
 Product, registration , login for re-design - p1
 Move api keys to secrets.yml - p1
 Add comments everywhere - p3
@@ -63,4 +63,6 @@ On selecting low to high/high to low/any category filter quantity selection disa
 
 reek
 breakman
-rubocop 
+rubocop
+
+Do not forget to open twilio

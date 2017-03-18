@@ -20,8 +20,9 @@ class User < ApplicationRecord
    end
    def send_pin
      begin
-       phnumber = "+" + country_code + phone_number unless country_code.match("\\+")
-       twilio_client.messages.create( to: phnumber, from: "+12015094847", body: "Your PIN is #{otp}")
+      #  phnumber = "+" + country_code + phone_number unless country_code.match("\\+")
+      #  twilio_client.messages.create( to: phnumber, from: "+12015094847", body: "Your PIN is #{otp}")
+       true
      rescue Exception => e
        result = AuthyJob.perform_now(phone_number, country_code, email)
        update({authy_id: result[1]["user"]["id"]})

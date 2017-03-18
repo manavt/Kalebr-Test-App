@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: :create
-  load_and_authorize_resource
+  load_and_authorize_resource :except => [:index, :order_history]
   skip_before_action :authenticate_user!, only: :index
   # GET /products
   # GET /products.json
@@ -68,7 +68,11 @@ class ProductsController < ApplicationController
     end
   end
  def order_history
-    @order_history = Order.all
+   if current_user.is?(:admin)
+      @order_history = Order.all
+    else
+      @order_history = current_user.orders
+  end
  end
   private
     # Use callbacks to share common setup or constraints between actions.

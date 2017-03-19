@@ -4,9 +4,7 @@
         <div class="item  col-xs-4 col-lg-4">
             <div class="thumbnail">
              <img class="group list-group-image" src="<%= display_file(product) %>" alt="" />
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">
-                        <%= product.title.truncate(20) %></h4>
+                        <%= product.title.truncate(20) %>
                     <p class="group inner list-group-item-text">
                       <% if product.document.present? %>
                         <% if product.document.is_pdf? %>
@@ -24,7 +22,6 @@
                           <%= render "product_row", product: product, order_item: @order_item %>
                        </div>
                     </div>
-                </div>
             </div>
         </div>
         <%end%>

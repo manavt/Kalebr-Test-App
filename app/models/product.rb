@@ -15,7 +15,10 @@ class Product < ApplicationRecord
   # end
   def self.search(str)
     unless  str.blank?
-      where("title like '%#{str}%' or price like '%#{str}%'")
+      if is_a?(String)
+        where("title like '%#{str}%'")
+      elsif is_a?(BigDecimal)
+         where(price: str.to_d)
     else
       all
     end

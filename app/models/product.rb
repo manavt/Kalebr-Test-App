@@ -13,6 +13,13 @@ class Product < ApplicationRecord
         document.photo_file_name unless document.blank?
       end
   end
+  def self.search(str)
+    unless  str.blank?
+      where("title like '%#{str}%' or price like '%#{str}%'")
+    else
+      all
+    end
+  end
   def base_price
     price.to_i
   end

@@ -14,3 +14,7 @@ Category.create([
   {name: "Camera"},
   {name: "Tablets"}
   ])
+
+  User.create(email: 'admin-agent@gmail.com', password: "admin@123", role: "admin", phone_number: "987654321", country_code: "91")
+
+  puts "Use email: admin-agent@gmail.com and password: admin@123 for admin"

@@ -5,14 +5,14 @@ class Product < ApplicationRecord
   has_many :order_items
   belongs_to :category
   accepts_nested_attributes_for :document
-  searchable do
-      text :title, :base_price
-      time :created_at
-      string :base_price
-      text :document do
-        document.photo_file_name unless document.blank?
-      end
-  end
+  # searchable do
+  #     text :title, :base_price
+  #     time :created_at
+  #     string :base_price
+  #     text :document do
+  #       document.photo_file_name unless document.blank?
+  #     end
+  # end
   def self.search(str)
     unless  str.blank?
       where("title like '%#{str}%' or price like '%#{str}%'")

@@ -14,16 +14,16 @@ class Product < ApplicationRecord
   #     end
   # end
   def self.search(str)
-    unless  str.blank?
-      if is_a?(String)
-        where("title like '%#{str}%'")
-      elsif is_a?(BigDecimal)
-         where(price: str.to_d)
-      end
-    else
-      all
+  unless  str.blank?
+    if str.is_a?(String)
+      where("title like '%#{str}%'")
+    elsif str.is_a?(BigDecimal)
+       where(price: str.to_d)
     end
+  else
+    all
   end
+end
   def base_price
     price.to_i
   end

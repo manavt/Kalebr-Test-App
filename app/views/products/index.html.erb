@@ -7,7 +7,15 @@
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                         <%= product.title.truncate(20) %></h4>
-                    <p class="group inner list-group-item-text">...</p>
+                    <p class="group inner list-group-item-text">
+                      <% if product.document.present? %>
+                        <% if product.document.is_pdf? %>
+                        <%= link_to "Download pdf", product.document.photo.path.split("public")[1]%>
+                        <%else%>
+                        ...
+                        <%end%>
+                      <%end%>
+                      </p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <p class="lead">
@@ -22,5 +30,3 @@
         <%end%>
     </div>
 </div>
-
-<%= link_to "Add new product", new_product_path if can? :create, Product%>

@@ -38,7 +38,7 @@ RSpec.describe ProductsController do
       login_admin
       it "returns product object" do
         post :create, params: {product: {title: Faker::Name.name, price: Faker::Number.decimal(2)}}
-         expect(response).to redirect_to "http://test.host/products/1"
+         expect(response).to redirect_to "http://test.host/products"
       end
     end
   end

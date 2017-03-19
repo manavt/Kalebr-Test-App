@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  validates :title, presence: true
+  validates :price, numericality: true
   has_one :document
   has_many :order_items
   belongs_to :category

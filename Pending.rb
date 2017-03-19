@@ -50,15 +50,17 @@ response = Authy::API.verify(:id => '36363384', :token => '0837585')
 
 Email do not have product details - p1 Done
 Add order viewing to normal user - p1 / p2 in Done
-Product, registration , login for re-design - p1
-Move api keys to secrets.yml - p1
+Product, registration , login for re-design - p1 done
+Move api keys to secrets.yml - p1 done
 Add comments everywhere - p3
-No need for the user class to be aware of the product class - p1
-New tab for viewing user information from admin panel- p2
+No need for the user class to be aware of the product class - p1 : Leaving
+New tab for viewing user information from admin panel- p2 : Done
 Convert everything to SASS - p1
 Move the add new product link next to the add new category link.
 | Medium     | ProductsController | product_params | Mass Assignment | Parameters should be whitelisted for mass assignment near line 80: params.require(:product).permit! |
-On selecting low to high/high to low/any category filter quantity selection disappears
+On selecting low to high/high to low/any category filter quantity selection disappears Done
+Download Pdf done
+Check for dynamics dates
 
 
 reek

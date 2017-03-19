@@ -10,7 +10,7 @@ class PaymentsController < ApplicationController
     if current_user.verify(params[:pin])
       SendEmailMailer.welcome(current_user,current_order.order_items).deliver_now! # send email to user upon successfull purchase
       current_order.order_items.each do |each_order|
-        order = current_user.orders.create(product_id: each_order.product_id)
+        order = current_user.orders.create(product_id: each_order.product_id, user: current_user)
         order.update({total: each_order.total_price, quantity: each_order.quantity})
       end
       current_order.order_items.update({order_id: nil})

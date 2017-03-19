@@ -1,6 +1,7 @@
 class AuthyJob < ActiveJob::Base
 
   def perform(user_contact, country_code, user_email)
+    # this is a fallback procedure gets active when twilio is down
      conn = Faraday.new(:url => 'https://api.authy.com') do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
@@ -24,6 +25,7 @@ class AuthyJob < ActiveJob::Base
              "seconds_to_expire": "120"
            }'
        end
+       # save user authy_id 
         _succeeded = JSON.parse(authenticate_user.body)
      end
      #return _succeeded, _added_user

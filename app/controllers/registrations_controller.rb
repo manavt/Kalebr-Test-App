@@ -4,6 +4,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
   private
   def sign_up_params
+    # some more added to user table this makes them available to user table
     params.require(:user).permit(:email, :password, :password_confirmation, :phone_number, :country_code)
   end
 

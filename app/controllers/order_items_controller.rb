@@ -4,6 +4,7 @@ class OrderItemsController < ApplicationController
     @order = current_order
     @order_item = @order.order_items.new(order_item_params)
     @order.save
+    # session will be flushed out once prodcut purchased
     session[:order_id] = @order.id
     respond_to do |format|
       format.js
@@ -13,6 +14,7 @@ class OrderItemsController < ApplicationController
   def update
     @order = current_order
     @order_item = @order.order_items.find(params[:id])
+    #updates the quantity of prodcut
     @order_item.update_attributes(order_item_params)
     @order_items = @order.order_items
     respond_to do |format|

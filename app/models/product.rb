@@ -19,6 +19,7 @@ class Product < ApplicationRecord
         where("title like '%#{str}%'")
       elsif is_a?(BigDecimal)
          where(price: str.to_d)
+      end
     else
       all
     end

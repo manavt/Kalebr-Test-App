@@ -6,13 +6,10 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     search = params[:search]
-=begin
       @products = Product.search do
         fulltext search
       end
        @products = @products.results
-=end
-       @products = Product.search(search)
        @order_item = current_order.order_items.new
   end
 

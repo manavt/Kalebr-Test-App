@@ -49,7 +49,7 @@ Step-8:
 
  Finally hit below command and cheers .
 
-rails server . # it starts the server on http://loalhost:3000
+rails server . # it starts the server on http://localhost:3000
 
 
 Note : This app runs with paperclip which creates multiple sizes of images so make sure you have imagemagick package , or install it .

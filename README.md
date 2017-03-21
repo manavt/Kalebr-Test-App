@@ -17,7 +17,7 @@ How to setup this app in you local machine :
 Step-1:
 
 Install ruby and rails in local from below guide .
-grails.com/setup
+https://gorails.com/setup
 
 Step-2:
 
@@ -33,7 +33,7 @@ rake db:create # setup database
 
 Step-5:
 
-rake dd:schema:load #set table and their columns .
+rake db:schema:load #set table and their columns .
 
 Step-6:
 
@@ -43,11 +43,11 @@ Step-7 :
 
 #This app uses Solr as search engine to give better searching experience . Run your solr using below commands .
 
-bundle exec rake sunsport:solr:start
+bundle exec rake sunspot:solr:start
 
 Step-8:
 
- Finally hit below command and cheers .
+#Finally hit below command and cheers .
 
 rails server . # it starts the server on http://localhost:3000
 
